@@ -51,10 +51,10 @@
             <div class="answer-block-btns">
                 <button class="answer-block-btn__mail">
                 </button>
-                <div class="call-animation">
-                <span class="call-animationSpan">85687965567</span>
                 <button class="answer-block-btn__call">
                 </button>
+                <div class="call-animation">
+                <span class="call-animationSpan">85687965567</span>
                 </div>
             </div>
             <img src="assets/css/img/close.svg" alt="" class="answer-block__close">
@@ -137,6 +137,7 @@
         </div>
         <div class="main-block-map">
             <img class="main-block-map__img" src="assets/css/img/map.svg">
+            <img class="main-block-map__img_mobile" src="assets/css/img/map_mobile.png">
             <span class="main-block-map__text">Работаем по <span class="main-block-map__textSpan">всей России с 2003 года</span>
             </span>
         </div>
@@ -426,6 +427,7 @@
     <div class="Results-block">
         <h1 class="Results-block__title">Результаты <span class="Results-block__titleSpan">нашей<br>работы</span></h1>
         <div class="Results-block-content-wrapper">
+           <div class="Results-block-content-wrapContent">
             <div class="Results-block-content">
                 <span class="Results-block-contentSpan">ооо “Домострой”</span>
                 <a class="Results-block-content__downloadBtn" href="#"><img class="Results-block-content__img" src="assets/css/img/Results-block-content__img.png">
@@ -441,6 +443,8 @@
                 <a class="Results-block-content__downloadBtn" href="#"><img class="Results-block-content__img" src="assets/css/img/Results-block-content__img.png">
                 </a>
             </div>
+        </div>
+           <div class="Results-block-content-wrapContent">
             <div class="Results-block-content">
                 <span class="Results-block-contentSpan">ООО “Транспорт и технологии”</span>
                 <a class="Results-block-content__downloadBtn" href="#"><img class="Results-block-content__img" src="assets/css/img/Results-block-content__img.png">
@@ -450,6 +454,7 @@
                 <span class="Results-block-contentSpan">ООО “Рубин”</span>
                 <a class="Results-block-content__downloadBtn" href="#"><img class="Results-block-content__img" src="assets/css/img/Results-block-content__img.png">
                 </a>
+            </div>
             </div>
         </div>
     </div>
@@ -575,17 +580,14 @@
                 id: 1
             },
             {
-                descr: 'Нашли цены ниже?Нужен ли директор и все учредители для ликвидации фирмы?',
+                descr: 'Нужен ли директор и все учредители для ликвидации фирмы?',
                 id: 2
             },
             {
                 descr: 'Какие документы нужны для ликвидации?',
                 id: 3
             },
-            {
-                descr: 'Нашли цены trh?',
-                id: 4
-            },
+            
 
         ]
         document.querySelector('#search').oninput = function() {
@@ -668,9 +670,9 @@
             $(".answer-block").removeClass("active")
         })
         $('.answer-block-btn__call').on('click', function(event) {
-            $(".answer-block-btn__call").toggleClass("active");
             $(".call-animation").toggleClass("active");
             $(".call-animationSpan").toggleClass("active");
+            $(".answer-block-btn__mail").toggleClass("active");
         })
     </script>
 </body>
